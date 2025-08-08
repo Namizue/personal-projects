@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+
+a{
+    color: rgb(238, 233, 233);
+    text-decoration: none;
+}
+
+.navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    opacity: 0;
+    animation: show-content .5s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes show-content {
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.navbar .logo{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar ul li {
+    list-style-type: none;
+    margin-left: 35px;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.navbar ul li:hover a{
+    color: #D94141;
+}
+
+.Home{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9%;
+    color: whitesmoke;
+    opacity: 0;
+    animation: show-content .5s ease-in-out forwards;
+    animation-delay: 1.6s;
+    gap: 50px;
+}
+
+.Home-info h1{
+    font-size: 60px;
+}
+
+.Home-info h2{
+    font-size: 30px;
+    margin-top: -10px;
+}
+
+.Home-info h2 span{
+    animation: colorChange 5s infinite;
+}
+
+@keyframes colorChange {
+    0% { color: #D94141; }
+    25% { color: rgb(115, 106, 236); }
+    50% { color: rgb(90, 236, 90); }
+    75% { color: rgb(204, 31, 204); }
+    100% { color: #D94141; }
+}
+
+
+.Home-info p{
+    font-size: 16px;
+    margin: 10px 0px 15px;
+}
+
+.Home-info .btn-sci{
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    background: #e96e6e;
+    border: 2px solid white;
+    border-radius: 40px;
+    box-shadow: 0 0 7px #D94141;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    transition: .5s;
+    text-align: center;
+}
+
+.btn:hover{
+    background: transparent;
+    color: white;
+    box-shadow: none;
+}
+
+.Home-info .btn-sci .sci{
+    margin: 20px;
+}
+
+.Home-info .btn-sci .sci a{
+    display: inline-flex;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid white;
+    color: white;
+    transition: .5s;
+    margin: 0 8px;
+    border-radius: 20px;
+}
+
+.Home-info .btn-sci .sci .ig:hover{
+    background: #C13584;
+    color: black;
+    box-shadow: 0 0 7px white;
+}
+
+.Home-info .btn-sci .sci .gh:hover{
+    background: white;
+    color: black;
+    box-shadow: 0 0 7px white;
+}
+
+.Home-info .btn-sci .sci .yt:hover{
+    background: #ff1b1b;
+    color: black;
+    box-shadow: 0 0 7px white;
+}
+
+.home-img{
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img .img-box{
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    position: relative;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.home-img .img-box::before,
+.home-img .img-box::after{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: conic-gradient(transparent,
+    transparent, transparent, rgb(247, 244, 244));
+    transform: rotate(0deg);
+    animation: rotate-border 10s linear infinite;
+}
+
+.home-img .img-box::after{
+    animation-delay: -5s;
+}
+
+@keyframes rotate-border {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.home-img .img-box .img-item{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}   
+
+.home-img .img-box .img-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}   
+
+.bars-an{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -1;
+}
+
+.bars-an .bar{
+    width: 100%;
+    height: 100%;
+    background: rgb(24, 23, 23);
+    transform: translateY(-100%);
+    animation: show-bars .5s ease-in-out forwards;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes show-bars {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

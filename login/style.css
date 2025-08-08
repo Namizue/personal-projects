@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: winky rough, sans-serif;    
+}
+
+body {
+    background: url(./imges/Wangsheng_Funeral_Parlor.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.container{
+    width: 30%;
+    height: 100%px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(54, 48, 48, 0.5);
+    backdrop-filter: blur(7px);
+    color: white;
+    padding: 20px;
+}
+
+.container h1{
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 19px rgba(0, 0, 0, 0.5);
+}
+
+.container .input{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 15px 0px 15px 0px;
+    justify-content: center;
+}
+
+.input input{
+    width: 80%;
+    height: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background: transparent;;
+    font-size: 16px;
+    padding: 10px 20px 10px 10px;
+}
+.input input::placeholder{
+    color: white;
+    opacity: 0.4;
+}
+
+.container .input i{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%) translateX(-30%);
+}
